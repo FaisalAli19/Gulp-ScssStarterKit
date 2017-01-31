@@ -1,0 +1,19 @@
+/*Do not edit _sprite file insist edit gulp templates sprite.css file*/
+
+{{#shapes}}
+    {{#first}}
+    .icon {
+        background-image: url("../../assets/images/sprites/{{{sprite}}}");
+    }
+
+    .no-svg .icon{
+        background-image: url("../../assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}");
+    }
+    {{/first}}
+
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;
+        background-position: {{position.relative.xy}};
+    }
+{{/shapes}}
